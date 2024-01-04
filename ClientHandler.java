@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.chatapp;
 
 /**
@@ -24,7 +20,6 @@ public class ClientHandler implements Runnable{
 			this.bReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 			this.pWriter = new PrintWriter(clientSocket.getOutputStream(), true);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -41,7 +36,6 @@ public class ClientHandler implements Runnable{
 				if(!name.isEmpty()) break;
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -55,7 +49,6 @@ public class ClientHandler implements Runnable{
 				if(userMessage == null) return;
 				server.broadcast("MESSAGE" + name + " : " + userMessage);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
