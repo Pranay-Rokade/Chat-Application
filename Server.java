@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.chatapp;
 
 /**
@@ -21,7 +17,6 @@ public class Server {
 				PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
 				writer.println(message);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -42,7 +37,6 @@ public class Server {
 				new Thread(clientHandler).start();
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
